@@ -1,0 +1,67 @@
+
+
+  
+  <!-- Inizio codice DIV #testo -->
+
+
+  
+ <?php
+   foreach ($block->getTypeMealCollection() as $key=>$typemeal){
+   
+        echo ' <div id="testo'.$typemeal->getHourMealId().'"><a href="#" onclick="visualizza(\'tipo'.$typemeal->getHourMealId().'\'); return false">';
+         $pasto='';
+        if ($typemeal->getHourMealId()==1)
+         {
+             $pasto='colazione';
+         }
+         else if($typemeal->getHourMealId()==2)
+         {
+             $pasto='pranzo';
+         }
+         else if($typemeal->getHourMealId()==3)
+         {
+             $pasto='cena';
+         }
+         else if($typemeal->getHourMealId()==4)
+         {
+             $pasto='merenda';
+         }
+         echo $pasto.'</a></div>';
+        echo '<div id="'.'tipo'.$typemeal->getHourMealId().'" style="display:none">';
+        echo '<table>';
+        foreach ($block->getMealBoxCollection($typemeal->getBoxId(),$typemeal->getHourMealId()) as $key=>$meal){
+            
+            $strIngredient = '';
+            foreach ($block->getIngredientCollection($meal->getId()) as $key=>$ingredient)
+            {
+                $strIngredient = $strIngredient.' '.$ingredient->getName().' ';
+            }
+            
+            echo '<tr>
+                    <td>'.$meal->getId().'</td>
+                    <td>'.$meal->getName().'</td>
+                        <td>'.$meal->getTypeHourId().'</td>
+                            <td> '.$strIngredient .' </td>
+                  </tr>';
+        }
+        echo '</table>';
+        echo '</div>';
+   }
+       
+    ?>
+ 
+</div>
+
+<script type="text/javascript" language="javascript">
+function visualizza(id){
+  if (document.getElementById){
+    if(document.getElementById(id).style.display == 'none'){
+      document.getElementById(id).style.display = 'block';
+    }else{
+      document.getElementById(id).style.display = 'none';
+    }
+  }
+}
+</script>
+<!-- Fine codice DIV #immagine -->
+   

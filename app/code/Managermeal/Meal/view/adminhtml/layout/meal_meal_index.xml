@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   layout="admin-2columns-left"  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+    <referenceContainer name="content">
+               <block class="Managermeal\Meal\Block\Adminhtml\Meal\Index" name="managermeal_meal" template="Managermeal_Meal::sayhello.phtml" />
+        <uiComponent name="managermeal_meal_meal_listing"/>
+    </referenceContainer>
+    </body>
+</page>
+ 

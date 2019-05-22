@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Managermeal_Meal::parent" title="Meals" module="Managermeal_Meal" sortOrder="51"   resource="Managermeal_Meal::parent" />
+        <add id="Managermeal_Meal::meal" title="Meals List" module="Managermeal_Meal" sortOrder="10" action="meal/meal/"  resource="Managermeal_Meal::meal" parent="Managermeal_Meal::parent" /> 
+    <add id="Managermeal_Meal::box" title="Box List" module="Managermeal_Meal" sortOrder="10" action="meal/box/"  resource="Managermeal_Meal::box" parent="Managermeal_Meal::parent" /> 
+    <add id="Managermeal_Meal::ingredient" title="Ingredient List" module="Managermeal_Meal" sortOrder="10" action="meal/ingredient/"  resource="Managermeal_Meal::ingredient" parent="Managermeal_Meal::parent" /> 
+    
+    </menu>
+</config>

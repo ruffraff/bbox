@@ -1,0 +1,29 @@
+
+
+     <?php
+
+
+
+echo "asdasdsadasdas";
+//echo  $block->getValue();
+?>
+
+
+<table>
+  <tr>
+    <th class="post-id">Id</th>
+    <th class="post-name">Name</th>
+    <th>Content</th>
+  </tr>
+    <?php
+    
+    
+        foreach ($block->getMealCollection(1) as $key=>$meal){
+            echo '<tr>
+                    <td>'.$meal->getId().'</td>
+                    <td>'.$meal->getName().'</td>
+                  </tr>';
+        }
+       
+    ?>
+</table>

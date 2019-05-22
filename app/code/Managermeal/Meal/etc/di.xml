@@ -1,0 +1,33 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="managermeal_meal_meal_listing_data_source" xsi:type="string">Managermeal\Meal\Model\ResourceModel\Meal\Collection</item>
+            </argument>
+            <argument name="collections" xsi:type="array">
+                <item name="managermeal_meal_box_listing_data_source" xsi:type="string">Managermeal\Meal\Model\ResourceModel\Box\Collection</item>
+            </argument>
+            <argument name="collections" xsi:type="array">
+                <item name="managermeal_meal_ingredient_listing_data_source" xsi:type="string">Managermeal\Meal\Model\ResourceModel\Ingredient\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Managermeal\Meal\Model\ResourceModel\Meal\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">bb_meal_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Managermeal\Meal\Model\ResourceModel\Meal</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Managermeal\Meal\Model\ResourceModel\Box\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">bb_box_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Managermeal\Meal\Model\ResourceModel\Box</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Managermeal\Meal\Model\ResourceModel\Ingredient\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">bb_ingredient_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Managermeal\Meal\Model\ResourceModel\Ingredient</argument>
+        </arguments>
+    </virtualType>
+</config>

@@ -27,7 +27,7 @@ class Box extends \Magento\Framework\View\Element\Template
     protected $_ingredientMealFactory;
     protected $_hourMealBoxFactory;
     protected $_resource;
-    protected $_object; 
+    protected $_object;  
     
     protected $logger;
  
@@ -57,7 +57,7 @@ class Box extends \Magento\Framework\View\Element\Template
 
 	public function sayHello()
 	{
-		return __('Hello World');
+		return __('Hello World1');
 	}
         
         public function getTypeMealCollection(){

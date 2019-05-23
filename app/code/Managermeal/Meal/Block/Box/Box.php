@@ -64,7 +64,7 @@ class Box extends \Magento\Framework\View\Element\Template
             //trovare associazione tra box_id e product_id uno a uno
             $currentProduct = $this->getCurrentProduct();
             $idbox=$currentProduct->getId(); 
-            
+             
             $collProdBox = $this->_productBoxFactory->create();
             $collectionpro = $collProdBox->getCollection();
             $productbox = $collectionpro->addFieldToFilter('main_table.product_id', $idbox);

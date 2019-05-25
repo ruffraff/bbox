@@ -57,6 +57,7 @@ class Box extends \Magento\Framework\View\Element\Template
 
 	public function sayHello()
 	{
+		//test
 		return __('Hello World1');
 	}
         

@@ -56,8 +56,13 @@ class Box extends \Magento\Framework\View\Element\Template
 	}
 
 	public function sayHello()
+<<<<<<< HEAD
 	{    
             //kjkjkj mmm bbbbbb
+=======
+	{
+		//test sss
+>>>>>>> e486dd9fd603f47b095602e679fb6357aaa7c69c
 		return __('Hello World1');
 	}
         
